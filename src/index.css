@@ -150,7 +150,7 @@ input {
   padding: 1rem;
   background: var(--secondary);
   color: var(--text);
-  border: none;
+  border: solid 1px var(--border);
 }
 
 .wrapper {
@@ -197,7 +197,7 @@ input {
   width: 0%;
   height: 100%;
   background: var(--negative);
-  transition: 0.25s ease-in-out;
+  transition: 0.20s ease-in-out;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 
@@ -271,8 +271,9 @@ input {
   margin: auto;
   padding: 3rem 2rem 3rem 2rem;
   border-radius: 0.5rem;
-  background: var(--background);
+  background: var(--secondary);
   box-shadow: 0 0 5rem 0.1rem black;
+  border: solid 1px var(--border);
 }
 
 /*.modal::after {
@@ -291,4 +292,5 @@ input {
   position: absolute;
   top: 0;
   right: 0;
+  padding: 1rem;
 }
