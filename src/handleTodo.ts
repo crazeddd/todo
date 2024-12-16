@@ -23,9 +23,14 @@ const handleTodo = () => {
         }
     }
 
-    /*const removeItem = () => {
+    const removeItem = (index: number) => {
+        const items = JSON.parse(localStorage.getItem("items") || "[]");
+        console.log(`Removing ${items[index].name}...`);
 
-    }*/
+        items.splice(index, 1);
+        localStorage.setItem("items", JSON.stringify(items));
+        setItems(items);
+    }
 
     /*const updateItem = () => {
 
@@ -40,7 +45,7 @@ const handleTodo = () => {
         setItems(JSON.parse(localStorage.getItem("items") || "[]"));
     }
 
-    return { createItem, removeAllItems, getItems, items };
+    return { createItem, removeItem, removeAllItems, getItems, items };
 }
 
 export { handleTodo };
